@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <style>
+             body{
+                background-image:linear-gradient(rgba(255, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)),url(signup.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+               
+            }
+            h1{
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-family:'Times New Roman', Times, serif;
+                font-size: 50px;
+                margin-top: 5px;
+            }
+            .sign{
+                margin: 0;
+                font-size: 30px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+            .signup{
+                width: 420px;
+                height:615px;
+                background: rgba(0, 0, 0, 0.8);
+                color: rgb(255, 255, 255);
+                top: 55%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                border-radius: 30px;
+                padding: 50px 20px;
+            }
+            div p{
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div input{
+                width: 100%;
+                height: 30px;
+                margin-bottom: 20px; 
+            }
+            .signup input[type="submit"]{
+                background-color: rgb(6, 164, 255);
+                border-radius: 22px;
+                font-size: 26px;
+                border: none;
+                height: 40px;
+            }
+            .signup input[type="submit"]:hover{
+                cursor: pointer;
+                background: rgb(0, 233, 58);
+            }
+            .radio{
+                width: 15px;
+                height: 15px;
+                margin-bottom: 30px; 
+               
+            }
+            .radio:hover{
+                cursor: pointer;
+            }
+           label{
+               font-size: 20px;
+           }
+           #del{
+                width: 120px;
+                height: 27px;
+                margin-left: 80px;
+                font-size: 20px;
+                background-color: rgb(255, 16, 16);
+                border: none;
+                border-radius: 20px;
+           }
+           #del:hover{
+               cursor: pointer;
+               background: rgba(231, 0, 0, 0.911);
+           }
+        </style>
+        <script src="validation.js"></script>
+    </head>
+    <body>
+        <h1>Create New account</h1>
+        <div class="signup">
+            <h1 class="sign">Sign-up Form</h1>
+            <hr>
+            <br>
+            <form onsubmit="return check(this);" method="POST">
+                <p>First name*</p>
+                <input type="text" name="fname" placeholder="Enter your First name" pattern="(?=.*[a-z]).{5,}" title="Name must consist of lowercase letters only and at least 5 characters">
+                <p>Last name</p>
+                <input type="text" name="lname" placeholder="Enter your Last name"  pattern="(?=.*[a-z]).{5,}" title="Name must consist of lowercase letters only and at least 5 characters">
+                <p>Your Email*</p>
+                <input type="email" name="emaill" placeholder="Enter your email" autocomplete="off" pattern="[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <p>Password*</p>
+                <input type="password" name="pass1" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z]).{9,}" title="Password must contain numbers and letters in lowercase and at least 9 or more characters">
+                <p>Confirm Password</p>
+                <input type="password" name="pass2" placeholder="Enter the same password" >
+                <label>Admin</label>
+                <input type="radio" name="x" class="radio">
+                <label>Student</label>
+                <input type="radio" name="x" class="radio">
+                <input type="reset" id="del">
+                <input type="submit" name="submit" value="Sign up">
+                
+            </form>
+
+        </div>
+    </body>
+</html>

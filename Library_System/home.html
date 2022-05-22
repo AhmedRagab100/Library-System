@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-image:linear-gradient(rgba(206, 48, 0, 0.5) , rgba(0,0,0,0.5)),url(library.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+               
+            }
+            .info{
+                font-size: 20px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+            h1{
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-family:'Times New Roman', Times, serif;
+                font-size: 50px;
+                margin-top: 5px;
+                
+            }
+            .login{
+                width: 420px;
+                height: 460px;
+                background: rgba(0, 0, 0, 0.8);
+                color: rgb(255, 255, 255);
+                top: 55%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                border-radius: 25px;
+                padding: 50px 20px;
+            }
+            .log{
+                margin: 0;
+                font-size: 30px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+               
+            }
+            div p{
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .login input{
+                width: 100%;
+                height: 35px;
+                margin-bottom: 30px; 
+            }
+            .login input[type="submit"]{
+                background-color: rgb(6, 164, 255);
+                border-radius: 20px;
+                font-size: 22px;
+                border: none;
+                height: 40px;
+            }
+            .login input[type="submit"]:hover{
+                cursor: pointer;
+                background: rgb(2, 0, 139);
+            }
+            button{
+                font-size: 20px;
+                background-color: rgb(148, 255, 27);
+                margin-left: 45px;
+                width: 300px;
+                height: 40px;
+                border-radius: 20px;
+        
+            }
+            button a{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+            }
+            button:hover{
+                cursor: pointer;
+                background: rgb(28, 138, 0);
+            }
+        </style>
+         <script src="validation.js"></script>
+    </head>
+    <body>
+        <h1>*library System*</h1>
+        <p class="info">(Our website is about library System it helps users to search or add books and many features)</p>
+        <div class="login">
+            <h1 class="log">Login Form</h1>
+            <hr>
+            <br>
+            <form onsubmit="return check2(this);" method="POST">
+                <p>E-mail</p>
+                <input type="email" name="email" placeholder="Enter your email"  pattern="[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <p>Password</p>
+                <input type="password" name="pass" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z]).{9,}" title="Password must contain numbers and letters in lowercase and at least 9 or more characters">
+                <input type="submit" name="submit" value="Login">
+                <br>
+                <button><a href="signup.html">Sign up or Create new account</a></button>
+            </form>
+
+        </div>
+
+    </body>
+</html>
